@@ -1,14 +1,14 @@
-<header class="flex flex-col justify-center items-center py-8 px-4 bg-base-300">
-    <div id="title" class="mb-2 text-center text-8xl sm:text-9xl">
+<header class="flex flex-col justify-center items-center py-8 px-4 bg-base-300 bg-white dark:bg-gray-800 dark:text-white">
+    <div id="title" class="mb-2 text-center text-8xl sm:text-9xl font-damion text-green-600">
         Devicon
         <span  class="block text-5xl -mt-6 sm:text-6xl sm:inline sm:mt-auto">
             v2.15.1
         </span>
     </div>
-    <p class="mt-4 text-xl text-center sm:mt-auto">
+    <p class="mt-4 text-xl text-center sm:mt-auto text-gray-400">
         Icons about programming languages, software development, and graphic design tools.
     </p>
-    <div class="flex flex-row my-2">
+    <div class="flex flex-row my-2 text-gray-400">
         <p class="flex flex-row items-center mr-2">
             <i class="devicon-github-original text-2xl mr-1"></i>
             <a href="https://github.com/devicons/devicon/" target="_blank">
@@ -22,23 +22,23 @@
             <a href="https://discord.com/invite/hScy8KWACQ" target="_blank">Discord</a>
         </p>
     </div>
-    <div  class="stats mt-2 mb-8">
-        <div  class="stat place-items-center">
-            <div class="stat-title">
+    <div  class="stats mt-2 mb-8 flex rounded-2xl dark:bg-gray-700">
+        <div  class="stat place-items-center p-4 border-r border-gray-600">
+            <div class="stat-title text-gray-400">
                 Total Icons
             </div>
-            <div  class="stat-value">277</div>
+            <div  class="stat-value text-4xl font-bold text-green-600">277</div>
         </div>
-        <div class="stat place-items-center">
-            <div class="stat-title">Total Versions</div>
-            <div  class="stat-value">1300</div>
+        <div class="stat place-items-center p-4">
+            <div class="stat-title text-gray-400">Total Versions</div>
+            <div  class="stat-value text-4xl font-bold text-green-600">1300</div>
         </div>
     </div>
-    <p class="text-center">
+    <p class="text-center text-gray-400">
         For CSS usage, paste the code in the &lt;head&gt; of your HTML
     </p>
     <app-code-snippet>
-        <div class="code-snippet relative rounded w-auto p-4 pr-10 mt-4">
+        <div class="code-snippet relative rounded-md w-auto p-4 pr-10 mt-4 text-gray-400 bg-gray-900 ">
             <div class="tooltip absolute right-2 top-4 w-7">
                 <button class="material-symbols-outlined copy rounded-full text-xl hover:cursor-pointer hover:hover-text-color">
                      content_copy
@@ -50,3 +50,8 @@
         </div>
     </app-code-snippet>
 </header>
+<style>
+    .font-damion {
+        font-family: 'Damion', Times, serif;
+    }
+</style>

@@ -1,5 +1,5 @@
-<footer class="footer footer-center p-10 bg-base-300 text-base-content rounded">
-  <div class="w-auto sm:w-[700px]">
+<footer class="footer footer-center p-10 bg-base-300 text-base-content bg-white dark:bg-gray-800 dark:text-gray-400 text-center">
+  <div class="container mx-auto sm:w-[700px]">
     <p class="mb-2 italic">
       All product names, logos, and brandsare property of their respective
       owners. All company, product and service names used in this website are
@@ -46,13 +46,6 @@
         href="https://icomoon.io/"
         target="_blank"
         class="underline">Icomoon</a
-      >
-    </p>
-    <p class="mt-2">
-      Copyright © 2015 by <a
-        href="https://github.com/konpa"
-        target="_blank"
-        class="underline">Konpa</a
       >
     </p>
   </div>
