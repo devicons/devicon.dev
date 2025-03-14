@@ -42,6 +42,11 @@ export const filteredIcons = derived(
   }
 );
 
+export const totalVersions = derived(
+  [icons],
+  ([$icons]) => $icons.reduce((acc, icon) => acc + icon?.versions?.font?.length + icon?.versions?.svg?.length, 0)
+)
+
 // Actions to update the store
 export function setSearchTerm(term) {
   searchTerm.set(term);
