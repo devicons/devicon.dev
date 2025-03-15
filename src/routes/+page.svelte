@@ -3,11 +3,9 @@
   import IconGrid from "../components/IconGrid.svelte";
   import SearchFilter from "../components/SearchFilter.svelte";
   import IconModal from "../components/IconModal.svelte";
-  import DarkModeToggle from "../components/DarkModeToggle.svelte";
   import {
     initializeStore,
     filteredIcons,
-    isDarkMode,
     isModalOpen,
   } from "$lib/stores/iconStore";
 

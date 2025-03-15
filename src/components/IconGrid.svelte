@@ -3,15 +3,12 @@
   
   export let icons = [];
   
-  function getIconUrl(icon, version) {
-    return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon.name}/${icon.name}-${version}.svg`;
-  }
 </script>
 
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
   {#each icons as icon}
     <div 
-      class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+      class="bg-white dark:bg-gray-800 hover:bg-green-500 hover:text-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
       on:click={() => openIconModal(icon)}
       on:keydown={(e) => e.key === 'Enter' && openIconModal(icon)}
       tabindex="0"
@@ -23,7 +20,7 @@
       </div>
       
       <div class="text-center">
-        <h3 class="font-medium text-sm truncate dark:text-white">{icon.name}</h3>
+        <h3 class="font-medium text-sm truncate">{icon.name}</h3>
       </div>
     </div>
   {/each}

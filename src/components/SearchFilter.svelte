@@ -19,7 +19,7 @@
 </script>
 
 <div
-  class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md flex gap-4 justify-between"
+  class=" py-4 rounded-lg flex gap-4 justify-between"
 >
   <div class="mb-4 grow">
     <input
