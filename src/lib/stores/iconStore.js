@@ -31,12 +31,13 @@ export const filteredIcons = derived(
   [icons, searchTerm, selectedTags],
   ([$icons, $searchTerm, $selectedTags]) => {
     return $icons.filter(icon => {
-      const matchesSearch = $searchTerm === '' || 
-        icon.name.toLowerCase().includes($searchTerm.toLowerCase());
-      
-      const matchesTags = $selectedTags.length === 0 || 
+      const matchesSearch = $searchTerm === '' ||
+        icon.name.toLowerCase().includes($searchTerm.toLowerCase()) ||
+        icon.altnames.some(altname => altname.toLowerCase().includes($searchTerm.toLowerCase()));
+
+      const matchesTags = $selectedTags.length === 0 ||
         (icon.tags && $selectedTags.every(tag => icon.tags.includes(tag)));
-      
+
       return matchesSearch && matchesTags;
     });
   }
