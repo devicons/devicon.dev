@@ -31,3 +31,6 @@ pnpm run build
 
 You can preview the production build with `pnpm run preview`.
 
+## Acknowledgements
+
+Design for this webapp is heavily inspired by [@risbi0](https://github.com/risbi0)'s [work](https://risbi0.github.io/devicon-new-ui/) on revamping devicon website 
