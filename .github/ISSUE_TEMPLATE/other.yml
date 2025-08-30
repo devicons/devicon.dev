@@ -1,0 +1,23 @@
+name: "Other Issue"
+description: "Questions, discussions, or anything that doesn’t fit the other templates."
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Other Issue
+        For questions, discussions, or anything else.
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "Briefly describe your issue or question."
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "Details"
+      description: "Provide any additional details or context."
+    validations:
+      required: false
