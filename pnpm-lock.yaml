@@ -20,7 +20,10 @@ importers:
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^4.0.0
-        version: 4.0.0(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2)))
+        version: 4.0.0(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))
+      '@sveltejs/adapter-static':
+        specifier: ^3.0.10
+        version: 3.0.10(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))
       '@sveltejs/kit':
         specifier: ^2.20.6
         version: 2.20.6(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2))
@@ -333,6 +336,11 @@ packages:
 
   '@sveltejs/adapter-auto@4.0.0':
     resolution: {integrity: sha512-kmuYSQdD2AwThymQF0haQhM8rE5rhutQXG4LNbnbShwhMO4qQGnKaaTy+88DuNSuoQDi58+thpq8XpHc1+oEKQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.0.0
+
+  '@sveltejs/adapter-static@3.0.10':
+    resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -937,6 +945,10 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2))
       import-meta-resolve: 4.1.0
+
+  '@sveltejs/adapter-static@3.0.10(@sveltejs/kit@2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))':
+    dependencies:
+      '@sveltejs/kit': 2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.2.7(jiti@2.4.2)(lightningcss@1.29.2))
 
   '@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.20.5)(vite@6.3.6(jiti@2.4.2)(lightningcss@1.29.2))':
     dependencies:
