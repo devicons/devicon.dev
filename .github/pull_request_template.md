@@ -1,6 +1,4 @@
-## Pull Request
-
-Thank you for your contribution!
+<!-- Thank you for your contribution! -->
 
 ### Description
 <!-- Please describe your changes in detail. -->
