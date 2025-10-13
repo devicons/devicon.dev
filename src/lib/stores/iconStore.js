@@ -9,21 +9,50 @@ export const isDarkMode = writable(false);
 export const selectedIcon = writable(null);
 export const isModalOpen = writable(false);
 
-// Initialize store with data from server
-export function initializeStore(initialIcons, initialTags) {
-  icons.set(initialIcons);
-  availableTags.set(initialTags);
-
-    // Check local storage for dark mode preference
-    if (typeof window !== 'undefined') {
-        const storedDarkMode = localStorage.getItem('darkMode') === 'true';
-        isDarkMode.set(storedDarkMode);
-        
-        // Apply theme to document
-        if (storedDarkMode) {
-          document.documentElement.classList.add('dark');
-        }
+// Load icons data from GitHub API
+export async function loadIconsData() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/devicons/devicon/master/devicon.json');
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch icons: ${response.statusText}`);
+    }
+    
+    const iconsData = await response.json();
+    
+    // Extract all available tags
+    const availableTagsData = new Set();
+    iconsData.forEach(icon => {
+      if (icon.tags && Array.isArray(icon.tags)) {
+        icon.tags.forEach(tag => availableTagsData.add(tag));
       }
+    });
+    
+    // Set the data in stores
+    icons.set(iconsData);
+    availableTags.set(Array.from(availableTagsData).sort());
+    
+    return { icons: iconsData, availableTags: Array.from(availableTagsData).sort() };
+  } catch (error) {
+    console.error('Error fetching icons:', error);
+    icons.set([]);
+    availableTags.set([]);
+    throw error;
+  }
+}
+
+// Initialize store with dark mode preference
+export function initializeStore() {
+  // Check local storage for dark mode preference
+  if (typeof window !== 'undefined') {
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    isDarkMode.set(storedDarkMode);
+    
+    // Apply theme to document
+    if (storedDarkMode) {
+      document.documentElement.classList.add('dark');
+    }
+  }
 }
 
 // Derived store for filtered icons
