@@ -1,31 +1,30 @@
 <script lang="ts">
 import { onMount } from "svelte"
 import IconGrid from "../components/iconGrid/IconGrid.svelte"
-
 import IconModal from "../components/modal/IconModal.svelte"
 import {
-  initializeStore,
+  fetchIconsData,
   filteredIcons,
   isModalOpen,
+  isLoading,
+  error,
 } from "$lib/stores/iconStore"
 import FiltersBar from "../components/filters/FiltersBar.svelte"
 
-export let data
-
 onMount(() => {
-  const tags: string[] = Array.isArray(data.availableTags)
-    ? data.availableTags.map((tag) => String(tag))
-    : []
-
-  initializeStore(data.icons, tags)
+  fetchIconsData()
 })
 </script>
 
 <main class="min-h-screen dark:bg-gray-900 dark:text-white">
   <div class="base-container">
-    {#if data.error}
+    {#if $isLoading}
+      <div class="flex items-center justify-center py-8">
+        <div class="text-lg">Loading icons...</div>
+      </div>
+    {:else if $error}
       <div class="rounded-lg bg-red-100 p-4 dark:bg-red-900">
-        <p class="text-red-700 dark:text-red-300">Error: {data.error}</p>
+        <p class="text-red-700 dark:text-red-300">Error: {$error}</p>
       </div>
     {:else}
       <FiltersBar />
